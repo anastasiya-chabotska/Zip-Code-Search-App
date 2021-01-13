@@ -28,7 +28,7 @@ class CityDisplay extends Component {
   }
 
   fetchData() {
-    let url = "http://ctp-zip-api.herokuapp.com/zip/" + this.state.zip;
+    let url = "https://ctp-zip-api.herokuapp.com/zip/" + this.state.zip;
     axios
       .get(url)
       .then((response) => {

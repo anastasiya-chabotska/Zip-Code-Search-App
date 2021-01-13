@@ -1,3 +1,3 @@
 # Zip Code Search App
-View at https://github.com/anastasiya-chabotska/Zip-Code-Search-App/settings <br>
+View at  https://anastasiya-chabotska.github.io/Zip-Code-Search-App/<br>
 Not working in Safari, need to use Chrome

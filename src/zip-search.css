@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  height: 60px;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+}
+
+.cityCard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: whitesmoke;
+  padding: 1em;
+  margin: 2em auto;
+  border-radius: 0.3em;
+}
+
+.title {
+  text-align: center;
+  border-bottom: 1px solid gray;
+  background-color: lightgray;
+}
+
+.search {
+  /* display: flexbox;
+  justify-content: center; */
+  width: 100%;
+  background-color: lightgray;
+  padding: 0.2em;
+  margin: auto;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: column;
+
+  width: 10%;
+  margin: auto;
+  padding: 0.2em;
+}
+
+button {
+  background-color: whitesmoke;
+  border-radius: 0.3em;
+  margin: 0.2em;
+  padding: 0.2em;
+}
+
+.noResults {
+  display: flexbox;
+  float: center;
+  margin: auto 10px;
+}

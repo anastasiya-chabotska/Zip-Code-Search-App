@@ -12,35 +12,29 @@ class CityDisplay extends Component {
     };
 
     this.changeZip = this.changeZip.bind(this);
+    this.fetchData = this.fetchData.bind(this);
   }
 
   //on typing, change zip state
   changeZip(event) {
     this.setState({
-      resultsFound: false,
       zip: event.target.value,
     });
   }
 
-  //fetch data when component's state updates
-  componentDidUpdate() {
-    this.fetchData();
-  }
-
   fetchData() {
-    let url = "https://ctp-zip-api.herokuapp.com/zip/" + this.state.zip;
+    let url = `https://ctp-zip-api.herokuapp.com/zip/${this.state.zip}`;
+    console.log(url);
     axios
       .get(url)
       .then((response) => {
         this.setState({ data: response.data, resultsFound: true });
       })
       .catch((err) => {
-        console.log(err);
+        this.setState({ resultsFound: false });
       });
   }
-
   render() {
-    console.log(this.state.data);
     return (
       <div>
         <div className="search">
@@ -51,7 +45,7 @@ class CityDisplay extends Component {
               onChange={this.changeZip}
               placeholder="Enter zip-code..."
             ></input>
-            {/* <button onClick={this.startSearch}>Search</button> */}
+            <button onClick={this.fetchData}>Search</button>
           </div>
         </div>
 
